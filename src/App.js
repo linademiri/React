@@ -1,12 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+
 
 function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello worldddd!
-    </h1>
-  );
+  useEffect(() => {
+    fetch("/api/products.json")
+      .then(res => res.json())
+      .then(res => console.log(res))
+  }, [])
+
+  useEffect(() => {
+    fetch("/api/products/1.json")
+      .then(res => res.json())
+      .then(res => console.log(res))
+  })
+  return <div></div>
 }
 
 export default App;
