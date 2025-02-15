@@ -20,7 +20,7 @@ function Product() {
 
     return (
         <figure>
-            <img src={`/images/${product.ImageUrl}`} alt={product.name} />
+
             <figcaption>{product.name} - {product.description}</figcaption>
         </figure>
     );
